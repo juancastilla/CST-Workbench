@@ -24,11 +24,11 @@ RUN python3 -m pip install --upgrade pip setuptools wheel
 RUN python3 -m pip install numpy==1.26.4                                                                                                                                                                               
 RUN python3 -m pip install -r requirements.txt  
 
-#Expose Port 8502
-EXPOSE 8500
+#Expose Port 8501
+EXPOSE 8501
 
 #Run healthcheck
-HEALTHCHECK CMD curl --fail http://localhost:8500/_stcore/health
+HEALTHCHECK CMD curl --fail http://localhost:8501/_stcore/health
 
 #Run Streamlit application
-ENTRYPOINT ["streamlit", "run", "streamlit/Home.py", "--server.port=8500", "--server.address=0.0.0.0"]
+ENTRYPOINT ["streamlit", "run", "streamlit/Home.py", "--server.port=8501", "--server.address=0.0.0.0"]
