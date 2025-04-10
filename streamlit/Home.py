@@ -69,8 +69,24 @@ st.session_state.language = app_language
 
 with st.sidebar.form(key='case_study_form'):
 
-    fishery_selection = st.selectbox('Choose a Case Study:', ('Octopus Chile', 'Octopus Peru', 'Southern Hake', 'Jumbo Flying Squid', 'Anchoveta', 'Marine Litter', 'Octopus Reduced', 'Coastal Basins'))
+    fishery_selection = st.selectbox('Choose a Case Study:', ('Mombasa', 'Comoros', 'Seychelles', 'South Africa', 'Octopus Chile', 'Octopus Peru', 'Southern Hake', 'Jumbo Flying Squid', 'Anchoveta', 'Marine Litter', 'Octopus Reduced', 'Coastal Basins'))
     st.session_state.fishery = fishery_selection
+
+    if fishery_selection == 'Mombasa':
+
+        st.session_state.sheet_id = '1ns7cWoEgItsThE1dRUL_bJQ2cpJbuoOafhnIMPYjK6k'
+
+    if fishery_selection == 'Comoros':
+
+        st.session_state.sheet_id = '1-AXzTorxg59aIEo2tDCkz38CGXIisfbOVJ0-Xvhxjrw'
+
+    if fishery_selection == 'Seychelles':
+
+        st.session_state.sheet_id = '1csD8D4Fyry85clMAQwR7XesEI3r8ZzTbZNQUXhyiogg'
+
+    if fishery_selection == 'South Africa':
+
+        st.session_state.sheet_id = '1gfhm62Db_qxymvYFtSymb1FcCtS0e-KYWlZXTC7P4HE'
 
     if fishery_selection == 'Octopus Chile':
 
